@@ -1,5 +1,5 @@
-import 'package:firebase/RealTimeDB.dart';
-import 'package:firebase/RealTimeDBu.dart';
+import 'package:firebase/RealTimeDatabase/RealTimeDB.dart';
+import 'package:firebase/RealTimeDatabase/RealTimeDBu.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
@@ -25,19 +25,19 @@ class _RealTimeDBv extends State<RealTimeDBv> {
             },
           ));
         },
-        child: const Text("ADD"),
         style: ButtonStyle(
-            elevation: MaterialStatePropertyAll(50),
+            elevation:const MaterialStatePropertyAll(50),
             shape: MaterialStatePropertyAll(BeveledRectangleBorder(
                 borderRadius: BorderRadius.circular(10))),
-            textStyle: MaterialStatePropertyAll(TextStyle(
+            textStyle: const MaterialStatePropertyAll(TextStyle(
                 fontSize: 20,
                 color: Colors.white70,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 2)),
-            backgroundColor: MaterialStatePropertyAll(Colors.black),
-            iconSize: MaterialStatePropertyAll(20),
-            minimumSize: MaterialStatePropertyAll(Size.square(40))),
+            backgroundColor:const MaterialStatePropertyAll(Colors.black),
+            iconSize: const MaterialStatePropertyAll(20),
+            minimumSize:const MaterialStatePropertyAll(Size.square(40))),
+        child: const Text("ADD"),
       ),
       body: SafeArea(
         child: FirebaseAnimatedList(
@@ -113,22 +113,22 @@ class _RealTimeDBv extends State<RealTimeDBv> {
                             return RealTimeDBu(data['key']);
                           },));
                         },
-                        child: const Text("UPDATE"),
                         style: ButtonStyle(
-                            elevation: MaterialStatePropertyAll(50),
+                            elevation:const MaterialStatePropertyAll(50),
                             shape: MaterialStatePropertyAll(
                                 BeveledRectangleBorder(
                                     borderRadius: BorderRadius.circular(10))),
-                            textStyle: MaterialStatePropertyAll(TextStyle(
+                            textStyle: const MaterialStatePropertyAll(TextStyle(
                                 fontSize: 20,
                                 color: Colors.white70,
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 2)),
                             backgroundColor:
-                                MaterialStatePropertyAll(Colors.white24),
-                            iconSize: MaterialStatePropertyAll(20),
+                                const MaterialStatePropertyAll(Colors.white24),
+                            iconSize: const MaterialStatePropertyAll(20),
                             minimumSize:
-                                MaterialStatePropertyAll(Size.square(40))),
+                                const MaterialStatePropertyAll(Size.square(40))),
+                        child: const Text("UPDATE"),
                       ),
                       ElevatedButton(
                         onPressed: () {
@@ -141,13 +141,12 @@ class _RealTimeDBv extends State<RealTimeDBv> {
                           // snapshot.ref.remove();
 
                         },
-                        child: const Text("DELETE"),
                         style: ButtonStyle(
                             elevation: MaterialStatePropertyAll(50),
                             shape: MaterialStatePropertyAll(
                                 BeveledRectangleBorder(
                                     borderRadius: BorderRadius.circular(10))),
-                            textStyle: MaterialStatePropertyAll(TextStyle(
+                            textStyle:const MaterialStatePropertyAll(TextStyle(
                                 fontSize: 20,
                                 color: Colors.white70,
                                 fontWeight: FontWeight.bold,
@@ -157,6 +156,7 @@ class _RealTimeDBv extends State<RealTimeDBv> {
                             iconSize: MaterialStatePropertyAll(20),
                             minimumSize:
                                 MaterialStatePropertyAll(Size.square(40))),
+                        child: const Text("DELETE"),
                       ),
                     ],
                   ),

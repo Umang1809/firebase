@@ -1,16 +1,19 @@
-import 'package:firebase/EmailPasseord2.dart';
-import 'package:firebase/Mobile.dart';
-import 'package:firebase/RealTimeDB.dart';
+import 'package:firebase/EmailPassword/EmailPasseord2.dart';
+import 'package:firebase/EmailPassword/EmailPassword.dart';
+import 'package:firebase/GetPackage/GetPackage.dart';
+import 'package:firebase/MobileSocialAuthentication/Mobile.dart';
+import 'package:firebase/RealTimeDatabase/RealTimeDB.dart';
+import 'package:firebase/TweenAnimation/TweenAnimation.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import 'EmailPassword.dart';
-import 'SocialAuth.dart';
+import 'MobileSocialAuthentication/SocialAuth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MaterialApp(
+  runApp(GetMaterialApp(
     home: home(),
     theme: ThemeData.dark(),
   ));
@@ -30,9 +33,27 @@ class _homeState extends State<home> {
     "Firebase Mobile Authentication",
     "Firebase Social Authentication",
     "Firebase Real Time DataBase",
+    "GET PACKAGE",
+    "TWEEN ANIMATION"
   ];
-  List<String> subtitle = ["Registration", "Sign-Up","OTP","Google/FaceBook","Real Time DataBase"];
-  List<Widget> Page = [EmailPassword(), EmailPasseord2(),Mobile(),SocialAuth(),RealTimeDB()];
+  List<String> subtitle = [
+    "Registration",
+    "Sign-Up",
+    "OTP",
+    "Google/FaceBook",
+    "Real Time DataBase",
+    "Get Package",
+    "TickerProviderStateMixin"
+  ];
+  List<Widget> Page = [
+    EmailPassword(),
+    EmailPasseord2(),
+    Mobile(),
+    SocialAuth(),
+    RealTimeDB(),
+    GetPackage(),
+    TweenAnimation()
+  ];
 
   @override
   Widget build(BuildContext context) {

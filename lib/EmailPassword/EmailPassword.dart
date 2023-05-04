@@ -1,8 +1,9 @@
+import 'package:firebase/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import 'main.dart';
+
 
 class EmailPassword extends StatefulWidget {
   const EmailPassword({Key? key}) : super(key: key);
