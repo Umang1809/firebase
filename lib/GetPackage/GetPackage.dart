@@ -165,6 +165,29 @@ class _GetPackageState extends State<GetPackage> {
               ),
             ),
           ),
+          InkWell(
+            onTap: () {
+              Get.to(
+                LiveUpdateWithGetx(),
+                transition: Transition.leftToRightWithFade,
+                duration: Duration(
+                  seconds: 4,
+                ),
+              );
+            },
+            child: Card(
+              margin: EdgeInsets.all(20),
+              elevation: 20,
+              child: Container(
+                padding: EdgeInsets.all(20),
+                child: const Center(
+                    child: Text(
+                  "Live Update On Value Using Getx and Stateless class",
+                  style: TextStyle(fontSize: 12, color: Colors.white),
+                )),
+              ),
+            ),
+          ),
         ]),
       ),
     );
