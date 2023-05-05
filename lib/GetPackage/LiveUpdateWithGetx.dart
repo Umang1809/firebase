@@ -13,7 +13,7 @@ class LiveUpdateWithGetx extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           SizedBox(
-            height: 50,
+            height: 45,
           ),
           Text("SUM OF TWO NUMBER", style: TextStyle(fontSize: 20)),
           SizedBox(
