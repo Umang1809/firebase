@@ -1,6 +1,7 @@
 import 'package:firebase/GetPackage/GetPackage.dart';
 import 'package:firebase/main.dart';
 import 'package:flutter/material.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class demo extends StatefulWidget {
   const demo({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class demo extends StatefulWidget {
 }
 
 class _demoState extends State<demo> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +27,12 @@ class _demoState extends State<demo> {
           elevation: 50,
           child: Icon(Icons.arrow_back),
         ),
-        body: Center(child: Text("This is Demo Screen",style: TextStyle(color: Colors.white,fontSize: 20)),)
+        body: Column(
+          children: [
+            Center(child: Text("This is Demo Screen",style: TextStyle(color: Colors.white,fontSize: 20)),),
+
+          ],
+        )
     );
   }
 }

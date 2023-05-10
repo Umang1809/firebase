@@ -1,16 +1,15 @@
 import 'package:firebase/TweenAnimation/TweenAnimation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TweenAnimationContainer extends StatefulWidget {
-  const TweenAnimationContainer({Key? key}) : super(key: key);
+class TweenAnimationContainer2 extends StatefulWidget {
+  const TweenAnimationContainer2({Key? key}) : super(key: key);
 
   @override
-  State<TweenAnimationContainer> createState() =>
-      _TweenAnimationContainerState();
+  State<TweenAnimationContainer2> createState() => _TweenAnimationContainer2State();
 }
 
-class _TweenAnimationContainerState extends State<TweenAnimationContainer>
-    with TickerProviderStateMixin {
+class _TweenAnimationContainer2State extends State<TweenAnimationContainer2>   with TickerProviderStateMixin {
   late AnimationController ac;
   late Animation widthAnimation;
   late Animation heightAnimation;
@@ -29,13 +28,22 @@ class _TweenAnimationContainerState extends State<TweenAnimationContainer>
     ac.addListener(() {
       setState(() {});
     });
-}
+    ac.addStatusListener((status){
+      if(status == AnimationStatus.completed){
+        ac.reverse();
+      } else if(status == AnimationStatus.dismissed) {
+        ac.forward();
+      }
+    });
+    // ac.forward();
+
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:
-          AppBar(title: Center(child: Text("TWEEN ANIMATION ON CONTAINER"))),
+      AppBar(title: Text("TWEEN ANIMATION ON CONTAINER 2"),centerTitle: true),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushReplacement(context, MaterialPageRoute(
@@ -49,10 +57,10 @@ class _TweenAnimationContainerState extends State<TweenAnimationContainer>
       ),
       body: Center(
           child: Container(
-        height: heightAnimation.value,
-        width: widthAnimation.value,
-        color: colorAnimation.value,
-      )),
+            height: heightAnimation.value,
+            width: widthAnimation.value,
+            color: colorAnimation.value,
+          )),
     );
   }
 }
