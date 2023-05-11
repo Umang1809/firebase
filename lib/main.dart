@@ -2,8 +2,10 @@ import 'package:firebase/EmailPassword/EmailPasseord2.dart';
 import 'package:firebase/EmailPassword/EmailPassword.dart';
 import 'package:firebase/GetPackage/GetPackage.dart';
 import 'package:firebase/MobileSocialAuthentication/Mobile.dart';
+import 'package:firebase/ProviderPackage/ProviderPackage.dart';
 import 'package:firebase/RealTimeDatabase/RealTimeDB.dart';
 import 'package:firebase/TweenAnimation/TweenAnimation.dart';
+import 'package:firebase/WhatsAppUI/WhatsAppUI.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,8 +35,10 @@ class _homeState extends State<home> {
     "Firebase Mobile Authentication",
     "Firebase Social Authentication",
     "Firebase Real Time DataBase",
+    "WHATSAPP",
     "GET PACKAGE",
-    "TWEEN ANIMATION"
+    "TWEEN ANIMATION",
+    "PROVIDER PACKAGE"
   ];
   List<String> subtitle = [
     "Registration",
@@ -42,8 +46,10 @@ class _homeState extends State<home> {
     "OTP",
     "Google/FaceBook",
     "Real Time DataBase",
+    "Whats App UI",
     "Get Package",
-    "TickerProviderStateMixin"
+    "TickerProviderStateMixin",
+    "ProviderStateManagement"
   ];
   List<Widget> Page = [
     EmailPassword(),
@@ -51,8 +57,10 @@ class _homeState extends State<home> {
     Mobile(),
     SocialAuth(),
     RealTimeDB(),
+    WhatsAppUI(),
     GetPackage(),
-    TweenAnimation()
+    TweenAnimation(),
+    ProviderPackage(),
   ];
 
   @override
