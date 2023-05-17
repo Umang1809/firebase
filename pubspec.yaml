@@ -46,6 +46,8 @@ dependencies:
   get:
   sliding_up_panel:
   provider:
+  google_mobile_ads:
+
 
 dev_dependencies:
   flutter_test:

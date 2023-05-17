@@ -1,6 +1,9 @@
+
 import 'package:firebase/EmailPassword/EmailPasseord2.dart';
 import 'package:firebase/EmailPassword/EmailPassword.dart';
 import 'package:firebase/GetPackage/GetPackage.dart';
+import 'package:firebase/GoogleAds/GoogleAds.dart';
+import 'package:firebase/GoogleAds/GoogleAds2.dart';
 import 'package:firebase/MobileSocialAuthentication/Mobile.dart';
 import 'package:firebase/ProviderPackage/ProviderPackage.dart';
 import 'package:firebase/RealTimeDatabase/RealTimeDB.dart';
@@ -15,6 +18,7 @@ import 'MobileSocialAuthentication/SocialAuth.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
   runApp(GetMaterialApp(
     home: home(),
     theme: ThemeData.dark(),
@@ -38,7 +42,9 @@ class _homeState extends State<home> {
     "WHATSAPP",
     "GET PACKAGE",
     "TWEEN ANIMATION",
-    "PROVIDER PACKAGE"
+    "PROVIDER PACKAGE",
+    "GOOGLE ADs",
+    "GOOGLE ADs2",
   ];
   List<String> subtitle = [
     "Registration",
@@ -49,7 +55,9 @@ class _homeState extends State<home> {
     "Whats App UI",
     "Get Package",
     "TickerProviderStateMixin",
-    "ProviderStateManagement"
+    "ProviderStateManagement",
+    "Google Ads",
+    "Google Ads2",
   ];
   List<Widget> Page = [
     EmailPassword(),
@@ -61,6 +69,8 @@ class _homeState extends State<home> {
     GetPackage(),
     TweenAnimation(),
     ProviderPackage(),
+    GoogleAds(),
+    GoogleAds2()
   ];
 
   @override
