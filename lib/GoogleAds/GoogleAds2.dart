@@ -64,7 +64,9 @@ void loadAdInter() {
           ad.fullScreenContentCallback = FullScreenContentCallback(
 
             // Called when the ad showed the full screen content.
-              onAdShowedFullScreenContent: (ad) {},
+              onAdShowedFullScreenContent: (ad) {
+                loadAdInter();
+              },
               // Called when an impression occurs on the ad.
               onAdImpression: (ad) {},
               // Called when the ad failed to show full screen content.
